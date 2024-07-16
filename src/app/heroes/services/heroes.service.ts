@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Hero } from '../interfaces/hero.interface';
 import { catchError, map, Observable, of, switchMap } from 'rxjs';
-import { environments } from '../../../environments/environments';
+import { environments } from '../../../environments/environments.prod';
 import { v4 as uuidv4 } from 'uuid';
 
 @Injectable({
