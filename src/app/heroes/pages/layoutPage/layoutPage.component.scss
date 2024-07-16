@@ -1,0 +1,30 @@
+:host {
+  display: block;
+}
+
+$colorPrimary: rgb(5, 5, 5);
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+mat-toolbar {
+  background-color: $colorPrimary;
+
+
+  button,  span.titleSidenav{
+    color: white;
+  }
+}
+
+.container-box {
+  margin: 5px;
+  padding: 30px;
+  margin: 0 auto; /* Centra el contenedor horizontalmente */
+  background-color: rgba($color: #000000, $alpha: 0.7);
+  border-radius: 20px !important;
+}
+
+mat-sidenav-container {
+  background-image: url('/assets/pattern.jpg') !important
+}

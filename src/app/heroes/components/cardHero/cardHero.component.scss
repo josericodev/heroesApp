@@ -1,0 +1,55 @@
+:host {
+  display: block;
+}
+
+.example-card {
+  max-width: 300px;
+  max-height: max-content;
+  transition: all 300ms;
+
+  mat-icon {
+    color: #ccc;
+  }
+}
+
+.example-card:hover {
+  transform: scale(1.03);
+  transition: all 300ms;
+
+  .icons {
+    visibility: visible;
+  }
+
+  mat-icon:hover {
+    color: #ffffff;
+    cursor: pointer;
+    transform: scale(1.3);
+    transition: all 300ms;
+  }
+
+}
+
+.logo-mv {
+  background-image: url('/assets/marvel-logo.png');
+  background-size: cover;
+}
+
+.logo-dc {
+  background-image: url('/assets/dc-comics-logo.jfif');
+  background-size: cover;
+}
+
+img {
+  display: block;
+}
+
+.icons {
+  background-color: rgba(000, 000, 000, 0.7);
+  position: absolute;
+  bottom: 1em;
+  right: 1em;
+  padding: 1em;
+  z-index: 4;
+  border-radius: 20px 0 0 0;
+  visibility: hidden;
+}

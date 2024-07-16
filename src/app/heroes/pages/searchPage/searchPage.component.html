@@ -1,0 +1,33 @@
+<h1>Buscador</h1>
+<mat-divider class="mb-5"></mat-divider>
+<div class="grid gap-3 text-center">
+  <mat-card class="w-full col-12">
+    <mat-card-content>
+      <mat-form-field  class="w-full">
+        <mat-label>Buscador de héroes</mat-label>
+        <input
+          (input)="searchHero();"
+          type="text"
+          matInput
+          [formControl]="searchInput"
+          [matAutocomplete]="auto"
+        >
+        <mat-autocomplete
+          #auto="matAutocomplete"
+          (optionSelected)="onSelectedOption( $event )"
+          autoActiveFirstOption>
+          <mat-option [routerLink]="['/heroes/edit', hero.id]" *ngFor="let hero of heroes" [value]="hero">
+            {{ hero.superhero }}
+          </mat-option>
+          <mat-option
+            *ngIf="heroes.length === 0 && searchInput.value && searchInput.value.length > 0"
+            value=""
+            >
+            No se encontrón ningún heroe con el término {{ searchInput.value }}
+          </mat-option>
+        </mat-autocomplete>
+      </mat-form-field>
+    </mat-card-content>
+  </mat-card>
+</div>
+
